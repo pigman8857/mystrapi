@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/products/hello",
+      "handler": "product.hello",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/products",
       "handler": "product.find",
       "config": {
