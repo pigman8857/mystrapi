@@ -7,6 +7,6 @@
 
 module.exports = {
     hello: async (ctx) => {
-        ctx.send({ message: 'hellow world' });
+        ctx.send('Hello World!');
     }
 };
