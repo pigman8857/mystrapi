@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "test": "jest --forceExit --detectOpenHandles"
   },
   "devDependencies": {},
   "dependencies": {
@@ -33,5 +34,13 @@
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".tmp",
+      ".cache"
+    ],
+    "testEnvironment": "node"
+  }
 }
