@@ -4,6 +4,7 @@ const http = require('http');
 let instance;
 
 async function setupStrapi() {
+
     if (!instance) {
         /** the following code in copied from `./node_modules/strapi/lib/Strapi.js` */
         await Strapi().load();
@@ -14,6 +15,7 @@ async function setupStrapi() {
 
         instance.server = http.createServer(instance.app.callback());
     }
+    console.log('finish setupStrapi ');
     return instance;
 }
 module.exports = { setupStrapi };
